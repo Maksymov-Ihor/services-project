@@ -1,4 +1,4 @@
-import img from '../../image/pexels-felix-mittermeier-1459497.jpg'
+// import img from '../../image/pexels-felix-mittermeier-1459497.jpg'
 
 import {
     ItemListWrapp,
