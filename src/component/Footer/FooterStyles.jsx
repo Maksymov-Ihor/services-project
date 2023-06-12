@@ -3,7 +3,9 @@ import { NavLink } from "react-router-dom";
 
 
 const FooterWrapp = styled.section`
-    position: fixed;
+    display: flex;
+    position: fixed; 
+    z-index: 99;
     bottom: 0;
     width: 100%;
     height: 60px;
@@ -21,12 +23,10 @@ const FooterWrapp = styled.section`
 
 const Conteiner = styled.div`
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     max-width: 1200px;
     margin: auto;
-    padding-left: ${p => p.theme.space[4]}px;
-    padding-right: ${p => p.theme.space[4]}px;
 `
 
 const TelLink = styled(NavLink)`
@@ -39,9 +39,27 @@ const MailLink = styled(NavLink)`
     color: ${p => p.theme.colors.baseWhite};
 `
 
+const SocialLink = styled.a`
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: ${p => p.theme.radii.extraLarge};
+    margin-right: ${p => p.theme.space[3]}px;
+`
+
+const Img = styled.img`
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: ${p => p.theme.radii.extraLarge};
+`
+
 export {
     FooterWrapp,
     Conteiner,
     TelLink,
-    MailLink
+    MailLink,
+    SocialLink,
+    Img
 }

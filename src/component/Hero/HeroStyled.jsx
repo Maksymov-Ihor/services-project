@@ -11,7 +11,6 @@ const HeroWrapp = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* padding-top: ${p => p.theme.space[8]}px; */
     @media screen and (max-width: 1199px) {
         height: 100vh;
     }
@@ -46,6 +45,16 @@ const Description = styled.div`
     }
 `
 
+const CallText = styled.p`
+    text-transform: uppercase;
+    margin-bottom: ${p => p.theme.space[4]}px;
+    font-size: ${p => p.theme.fontSizes.s};
+    font-weight: ${p => p.theme.fontWeights.normal};
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
+`
+
 const Title = styled.h1`
     margin-bottom: ${p => p.theme.space[4]}px;
     font-size: ${p => p.theme.fontSizes.l};
@@ -54,7 +63,7 @@ const Title = styled.h1`
         text-align: center;
     }
     @media screen and (min-width: 768px) {
-        margin-left: ${p => p.theme.space[4]}px;
+        margin-left: ${p => p.theme.space[5]}px;
     }
 `
 
@@ -89,6 +98,7 @@ export {
     HeroWrapp,
     Conteiner,
     Description,
+    CallText,
     Title,
     Text,
     LinkBtn

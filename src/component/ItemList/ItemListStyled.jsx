@@ -23,6 +23,8 @@ const SecTitle = styled.h3`
 const List = styled.ul`
     display: flex;
     /* flex-wrap: wrap; */
+    flex-direction: column;
+        align-items: center;
     @media screen and (max-width: 767px) {
         flex-direction: column;
         align-items: center;

@@ -5,27 +5,36 @@ import { BsArrowRight } from 'react-icons/bs';
 
 const ProductWrapp = styled.section`
     width: 100%;
-    height: 600px;
+    height: 100%;
     background-color: ${p => p.theme.colors.bgPrimeryColor};
     padding-top: ${p => p.theme.space[6]}px;
     padding-bottom: ${p => p.theme.space[6]}px;
 `
 
 const Conteiner = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
     max-width: 1200px;
     margin: auto;
     padding-left: ${p => p.theme.space[4]}px;
     padding-right: ${p => p.theme.space[4]}px;
+    padding-top: ${p => p.theme.space[6]}px;
+    padding-bottom: ${p => p.theme.space[6]}px;
     color: ${p => p.theme.colors.textPrimery};
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: ${p => p.theme.space[5]}px;
+    }
 `
 
 const ProductInfo = styled.div`
     display: flex;
     flex-direction: column;
-    padding-top: ${p => p.theme.space[6]}px;
-    padding-bottom: ${p => p.theme.space[6]}px;
+    
     @media screen and (max-width: 767px) {
         align-items: center;
+        margin-bottom: ${p => p.theme.space[6]}px;
     }
     @media screen and (min-width: 768px) {
         width: 50%;

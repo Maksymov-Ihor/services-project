@@ -7,7 +7,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 const ServicesWrapp = styled.section`
     width: 100%;
-    height: 600px;
+    height: 100%;
     background-image: linear-gradient(to right,
         rgba(47,48,58,0.4),
         rgba(47,48,58,0.4)), 
@@ -18,20 +18,27 @@ const ServicesWrapp = styled.section`
 `
 
 const Conteiner = styled.div`
+    display: flex;
     max-width: 1200px;
     padding-left: ${p => p.theme.space[4]}px;
     padding-right: ${p => p.theme.space[4]}px;
+    padding-top: ${p => p.theme.space[6]}px;
+    padding-bottom: ${p => p.theme.space[6]}px;
     margin: auto;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 const ServicesInfo = styled.div`
     display: flex;
     flex-direction: column;
     color: ${p => p.theme.colors.baseWhite};
-    padding-top: ${p => p.theme.space[6]}px;
-    padding-bottom: ${p => p.theme.space[6]}px;
+    
     @media screen and (max-width: 767px) {
         align-items: center;
+        margin-bottom: ${p => p.theme.space[6]}px;
     }
     @media screen and (min-width: 768px) {
         width: 50%;

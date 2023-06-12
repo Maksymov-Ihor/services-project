@@ -1,3 +1,7 @@
+import Carousel from '../Carousel';
+
+import image from '../../image/car2.jpg'
+
 import {
     ProductWrapp,
     Conteiner,
@@ -28,6 +32,7 @@ const Product = () => {
                     </ItemList>
                     <LinkBtn to='/'>больше товаров<ArrowIcon /></LinkBtn>
                 </ProductInfo>
+                <Carousel image={image} />
             </Conteiner>
         </ProductWrapp>
     )

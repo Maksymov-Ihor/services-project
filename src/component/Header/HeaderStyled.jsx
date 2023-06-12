@@ -30,7 +30,6 @@ const LogoLink = styled(NavLink)`
 `
 
 const Navigation = styled.nav`
-    justify-content: space-between;
     width: 100%;
     @media screen and (max-width: 1199px) {
         display: ${({ open }) => (open ? 'flex' : 'none')};
@@ -48,6 +47,7 @@ const Navigation = styled.nav`
     @media screen and (min-width: 1200px) {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     } 
 `
 
@@ -56,6 +56,14 @@ const ItemList = styled.ul`
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin-bottom: ${p => p.theme.space[4]}px;
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255,255,255,0.4);
+        }    
     }
     @media screen and (min-width: 1200px) {
         display: flex;
@@ -64,10 +72,7 @@ const ItemList = styled.ul`
 
 const Item = styled.li`
     @media screen and (max-width: 1199px) {
-        margin-bottom: ${p => p.theme.space[3]}px;
-        &:last-child {
-            margin-bottom: 0;
-        }
+        margin-bottom: ${p => p.theme.space[4]}px;
     }
     @media screen and (min-width: 1200px) {
         margin-right: ${p => p.theme.space[4]}px;
@@ -85,7 +90,9 @@ const ItemLink = styled(NavLink)`
         font-size: ${p => p.theme.fontSizes.m};
     }
     @media screen and (min-width: 1200px) {
+        position: relative;
         font-size: ${p => p.theme.fontSizes.s};
+        padding: ${p => p.theme.space[2]}px;
     }
 `
 
@@ -97,20 +104,24 @@ const ContactLink = styled(NavLink)`
     font-size: ${p => p.theme.fontSizes.s};
     font-weight: ${p => p.theme.fontWeights.normal};
     padding: ${p => p.theme.space[1]}px;
-    margin-bottom: ${p => p.theme.space[3]}px;
-    &:last-child {
-        margin-bottom: 0;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: ${p => p.theme.space[3]}px;
+        &:last-child {
+            margin-bottom: 0;
+        }   
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: ${p => p.theme.space[3]}px;
     }
 `
 
 const ContactWrapp = styled.div`
-    display: flex;
-    /* flex-direction: column; */
     @media screen and (max-width: 1199px) {
-        
+        /* display: none; */
     }
     @media screen and (min-width: 1200px) {
-        
+        display: flex;
+        align-items: center;
     }
 `
 

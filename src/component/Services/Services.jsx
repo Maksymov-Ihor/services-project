@@ -1,3 +1,7 @@
+import Carousel from '../Carousel';
+
+import image from '../../image/car1.jpg'
+
 import {
     ServicesWrapp,
     Conteiner,
@@ -28,6 +32,7 @@ const Services = () => {
                     </ItemList>
                     <LinkBtn to='/'>больше услуг<ArrowIcon /></LinkBtn>
                 </ServicesInfo>
+                <Carousel image={image} />
             </Conteiner>
         </ServicesWrapp>
     )

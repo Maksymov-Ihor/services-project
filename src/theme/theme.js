@@ -4,14 +4,6 @@ const theme = {
         bgPrimeryColor: '#ECECEC',
         textPrimery: '#22252A',
         bgAccentColor: '#2A2C36',
-
-
-        
-        bgActiveColor: '#2A2C36',
-        bgAuxiliaryColor: '#EBF3D4',
-        
-        textAccent: '#fafafa',
-        btnPrimeryColor: '#8BAA36',
     },
 
     space: [0, 2, 4, 8, 16, 32, 64, 128, 265],
